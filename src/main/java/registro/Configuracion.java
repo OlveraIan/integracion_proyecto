@@ -34,7 +34,7 @@ public class Configuracion extends WsConfigurerAdapter {
         return new ServletRegistrationBean<>(servlet, "/ws/*");
     }
 
-    @Bean(name = "registro")
+    @Bean(name = "pago")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema registroSchema) {
         DefaultWsdl11Definition wsdl = new DefaultWsdl11Definition();
         wsdl.setPortTypeName("registroPort");
