@@ -1,4 +1,4 @@
-package uv.mx.registro;
+package registro;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
@@ -22,7 +22,8 @@ import org.springframework.web.filter.CorsFilter;
 public class Configuracion extends WsConfigurerAdapter {
     @Bean
     public XsdSchema registroSchema() {
-        return new SimpleXsdSchema(new ClassPathResource("esquema.xsd"));
+        return new SimpleXsdSchema(
+            new ClassPathResource("schema.xsd"));
     }
 
     @Bean
