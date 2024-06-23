@@ -1,0 +1,12 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"
+                  xmlns:namespaceServicio="https://registro.uv.mx/contabilidad">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <namespaceServicio:AfectacionPresupuestalRequest>
+            <namespaceServicio:folio>asj123</us:folio>
+            <namespaceServicio:nombreProducto>silla</us:nombreProducto>
+            <namespaceServicio:cantidad>5</us:cantidad>
+            <namespaceServicio:precio>9.99</us:precio>
+        </namespaceServicio:AfectacionPresupuestalRequest>
+    </soapenv:Body>
+</soapenv:Envelope>

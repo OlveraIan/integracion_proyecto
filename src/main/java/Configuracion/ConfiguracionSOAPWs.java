@@ -1,4 +1,4 @@
-package registro;
+package Configuracion;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
@@ -17,34 +17,35 @@ import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CommonsRequestLoggingFilter;
 import org.springframework.web.filter.CorsFilter;
 
-@EnableWs
+
 @Configuration
-public class Configuracion extends WsConfigurerAdapter {
+@EnableWs
+
+public class ConfiguracionSOAPWs extends WsConfigurerAdapter {
     @Bean
     public XsdSchema registroSchema() {
-        return new SimpleXsdSchema(
-            new ClassPathResource("schema.xsd"));
+        return new SimpleXsdSchema(new ClassPathResource("schema.xsd"));
     }
 
     @Bean
-    public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(ApplicationContext applicationContext) {
+    public ServletRegistrationBean<MessageDispatcherServlet> messageDispatcherServlet(ApplicationContext appContext) {
         MessageDispatcherServlet servlet = new MessageDispatcherServlet();
-        servlet.setApplicationContext(applicationContext);
+        servlet.setApplicationContext(appContext);
         servlet.setTransformWsdlLocations(true);
-        return new ServletRegistrationBean<>(servlet, "/ws/*");
+        return new ServletRegistrationBean<MessageDispatcherServlet>(servlet, "/ws/*");
     }
 
-    @Bean(name = "pago")
-    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema registroSchema) {
+    @Bean(name = "manejoContabilidad")
+    public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema contabilidadSchema) {
         DefaultWsdl11Definition wsdl = new DefaultWsdl11Definition();
-        wsdl.setPortTypeName("registroPort");
+        wsdl.setPortTypeName("contabilidadPort");
         wsdl.setLocationUri("/ws");
-        wsdl.setTargetNamespace("https://registro.uv.mx/registro");
-        wsdl.setSchema(registroSchema);
+        wsdl.setTargetNamespace("https://registro.uv.mx/contabilidad");
+        wsdl.setSchema(contabilidadSchema);
         return wsdl;
     }
 
-    @Bean
+    /* @Bean
     public CommonsRequestLoggingFilter requestLoggingFilter() {
         CommonsRequestLoggingFilter loggingFilter = new CommonsRequestLoggingFilter();
         loggingFilter.setIncludeClientInfo(true);
@@ -71,5 +72,5 @@ public class Configuracion extends WsConfigurerAdapter {
         FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<>(new CorsFilter(source));
         bean.setOrder(0);
         return bean;
-    }
+    } */
 }

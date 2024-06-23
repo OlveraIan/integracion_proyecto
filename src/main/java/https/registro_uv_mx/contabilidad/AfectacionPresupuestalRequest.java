@@ -2,11 +2,11 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
 // Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2024.06.13 a las 11:38:54 PM GMT-07:00 
+// Generado el: 2024.06.22 a las 09:47:07 PM CST 
 //
 
 
-package https.registro_uv_mx.registro;
+package https.registro_uv_mx.contabilidad;
 
 import java.math.BigDecimal;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -45,8 +45,8 @@ import javax.xml.bind.annotation.XmlType;
     "cantidad",
     "precio"
 })
-@XmlRootElement(name = "guardadoRequest")
-public class GuardadoRequest {
+@XmlRootElement(name = "AfectacionPresupuestalRequest")
+public class AfectacionPresupuestalRequest {
 
     @XmlElement(required = true)
     protected String folio;
