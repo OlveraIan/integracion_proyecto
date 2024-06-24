@@ -45,7 +45,7 @@ public class ConfiguracionSOAPWs extends WsConfigurerAdapter {
         return wsdl;
     }
 
-    /* @Bean
+    @Bean
     public CommonsRequestLoggingFilter requestLoggingFilter() {
         CommonsRequestLoggingFilter loggingFilter = new CommonsRequestLoggingFilter();
         loggingFilter.setIncludeClientInfo(true);
@@ -72,5 +72,5 @@ public class ConfiguracionSOAPWs extends WsConfigurerAdapter {
         FilterRegistrationBean<CorsFilter> bean = new FilterRegistrationBean<>(new CorsFilter(source));
         bean.setOrder(0);
         return bean;
-    } */
+    }
 }

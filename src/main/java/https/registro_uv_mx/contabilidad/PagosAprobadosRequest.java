@@ -10,6 +10,7 @@ package https.registro_uv_mx.contabilidad;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
+import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -24,7 +25,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="success" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="folio" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,27 +36,36 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "success"
+    "folio"
 })
-@XmlRootElement(name = "PagoResponse")
-public class PagoResponse {
+@XmlRootElement(name = "pagosAprobadosRequest")
+public class PagosAprobadosRequest {
 
-    protected boolean success;
+    @XmlElement(required = true)
+    protected String folio;
 
     /**
-     * Obtiene el valor de la propiedad success.
+     * Obtiene el valor de la propiedad folio.
      * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
      */
-    public boolean isSuccess() {
-        return success;
+    public String getFolio() {
+        return folio;
     }
 
     /**
-     * Define el valor de la propiedad success.
+     * Define el valor de la propiedad folio.
      * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
      */
-    public void setSuccess(boolean value) {
-        this.success = value;
+    public void setFolio(String value) {
+        this.folio = value;
     }
 
 }

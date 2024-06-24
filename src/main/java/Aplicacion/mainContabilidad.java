@@ -1,16 +1,18 @@
 package Aplicacion;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.metrics.buffering.BufferingApplicationStartup;
+
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = "Endpoints,"+"https.registro_uv_mx.contabilidad,"+"Configuracion")
 public class mainContabilidad {
 
 	public static void main(String[] args) {
-		SpringApplication app = new SpringApplication(mainContabilidad.class);
-		app.setApplicationStartup(new BufferingApplicationStartup(2048));
-		app.run(args);
+		
+		SpringApplication.run(mainContabilidad.class, args);
 
 	}
 

@@ -1,31 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+<bindings version="3.0" xmlns="https://jakarta.ee/xml/ns/jaxb">
   <!--
 
-Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
-Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
+Visite https://eclipse-ee4j.github.io/jaxb-ri 
 Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-Generado el: 2024.06.22 a las 09:47:07 PM CST 
+Generado el: 2024.06.23 a las 08:33:55 PM CST 
 
   -->
   <bindings scd="x-schema::tns" xmlns:tns="https://registro.uv.mx/contabilidad">
     <schemaBindings map="false">
       <package name="https.registro_uv_mx.contabilidad"/>
     </schemaBindings>
-    <bindings scd="tns:AfectacionPresupuestalRequest">
-      <class ref="https.registro_uv_mx.contabilidad.AfectacionPresupuestalRequest"/>
-    </bindings>
     <bindings scd="tns:PagoRequest">
       <class ref="https.registro_uv_mx.contabilidad.PagoRequest"/>
     </bindings>
-    <bindings scd="tns:guardadoRequest">
-      <class ref="https.registro_uv_mx.contabilidad.GuardadoRequest"/>
-    </bindings>
-    <bindings scd="tns:AfectacionPresupuestalResponse">
-      <class ref="https.registro_uv_mx.contabilidad.AfectacionPresupuestalResponse"/>
-    </bindings>
     <bindings scd="tns:PagoResponse">
       <class ref="https.registro_uv_mx.contabilidad.PagoResponse"/>
+    </bindings>
+    <bindings scd="tns:pagosAprobadosRequest">
+      <class ref="https.registro_uv_mx.contabilidad.PagosAprobadosRequest"/>
+    </bindings>
+    <bindings scd="tns:pagosAprobadosResponse">
+      <class ref="https.registro_uv_mx.contabilidad.PagosAprobadosResponse"/>
     </bindings>
   </bindings>
 </bindings>

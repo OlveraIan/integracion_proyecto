@@ -1,14 +1,14 @@
 //
-// Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
-// Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+// Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
+// Visite https://eclipse-ee4j.github.io/jaxb-ri 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2024.06.22 a las 09:47:07 PM CST 
+// Generado el: 2024.06.23 a las 08:33:55 PM CST 
 //
 
 
 package https.registro_uv_mx.contabilidad;
 
-import javax.xml.bind.annotation.XmlRegistry;
+import jakarta.xml.bind.annotation.XmlRegistry;
 
 
 /**
@@ -37,14 +37,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AfectacionPresupuestalRequest }
-     * 
-     */
-    public AfectacionPresupuestalRequest createAfectacionPresupuestalRequest() {
-        return new AfectacionPresupuestalRequest();
-    }
-
-    /**
      * Create an instance of {@link PagoRequest }
      * 
      */
@@ -53,27 +45,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GuardadoRequest }
-     * 
-     */
-    public GuardadoRequest createGuardadoRequest() {
-        return new GuardadoRequest();
-    }
-
-    /**
-     * Create an instance of {@link AfectacionPresupuestalResponse }
-     * 
-     */
-    public AfectacionPresupuestalResponse createAfectacionPresupuestalResponse() {
-        return new AfectacionPresupuestalResponse();
-    }
-
-    /**
      * Create an instance of {@link PagoResponse }
      * 
      */
     public PagoResponse createPagoResponse() {
         return new PagoResponse();
+    }
+
+    /**
+     * Create an instance of {@link PagosAprobadosRequest }
+     * 
+     */
+    public PagosAprobadosRequest createPagosAprobadosRequest() {
+        return new PagosAprobadosRequest();
+    }
+
+    /**
+     * Create an instance of {@link PagosAprobadosResponse }
+     * 
+     */
+    public PagosAprobadosResponse createPagosAprobadosResponse() {
+        return new PagosAprobadosResponse();
     }
 
 }

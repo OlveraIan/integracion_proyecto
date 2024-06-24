@@ -4,16 +4,6 @@ elementFormDefault="qualified"
 xmlns:xsd=           "http://www.w3.org/2001/XMLSchema" 
 targetNamespace=    "https://registro.uv.mx/contabilidad" 
 xmlns:tns=          "https://registro.uv.mx/contabilidad">
-    <xsd:element name="AfectacionPresupuestalRequest">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element name="folio" type="xsd:string" />
-                <xsd:element name="nombreProducto" type="xsd:string" />
-                <xsd:element name="cantidad" type="xsd:int" />
-                <xsd:element name="precio" type="xsd:decimal" />
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
     <xsd:element name="PagoRequest">
         <xsd:complexType>
             <xsd:sequence>
@@ -24,27 +14,27 @@ xmlns:tns=          "https://registro.uv.mx/contabilidad">
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-    <xsd:element name="guardadoRequest">
+    <xsd:element name="PagoResponse">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="success" type="xsd:boolean" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="pagosAprobadosRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="folio" type="xsd:string" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="pagosAprobadosResponse">
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="folio" type="xsd:string" />
                 <xsd:element name="nombreProducto" type="xsd:string" />
                 <xsd:element name="cantidad" type="xsd:int" />
                 <xsd:element name="precio" type="xsd:decimal" />
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
-    <xsd:element name="AfectacionPresupuestalResponse">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element name="success" type="xsd:boolean" />
-            </xsd:sequence>
-        </xsd:complexType>
-    </xsd:element>
-    <xsd:element name="PagoResponse">
-        <xsd:complexType>
-            <xsd:sequence>
-                <xsd:element name="success" type="xsd:boolean" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
