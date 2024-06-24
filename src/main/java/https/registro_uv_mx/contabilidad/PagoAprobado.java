@@ -12,21 +12,19 @@ import java.math.BigDecimal;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlElement;
-import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para anonymous complex type.
+ * <p>Clase Java para pagoAprobado complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType&gt;
+ * &lt;complexType name="pagoAprobado"&gt;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="id_dependencia" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="folio" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="nombreProducto" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
  *         &lt;element name="cantidad" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
@@ -40,18 +38,14 @@ import jakarta.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "idDependencia",
+@XmlType(name = "pagoAprobado", propOrder = {
     "folio",
     "nombreProducto",
     "cantidad",
     "precio"
 })
-@XmlRootElement(name = "PagoRequest")
-public class PagoRequest {
+public class PagoAprobado {
 
-    @XmlElement(name = "id_dependencia", required = true)
-    protected String idDependencia;
     @XmlElement(required = true)
     protected String folio;
     @XmlElement(required = true)
@@ -59,30 +53,6 @@ public class PagoRequest {
     protected int cantidad;
     @XmlElement(required = true)
     protected BigDecimal precio;
-
-    /**
-     * Obtiene el valor de la propiedad idDependencia.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getIdDependencia() {
-        return idDependencia;
-    }
-
-    /**
-     * Define el valor de la propiedad idDependencia.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setIdDependencia(String value) {
-        this.idDependencia = value;
-    }
 
     /**
      * Obtiene el valor de la propiedad folio.

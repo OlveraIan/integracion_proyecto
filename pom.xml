@@ -15,6 +15,7 @@
 	<description>Servicio de Contabilidad</description>
 	<properties>
 		<java.version>17</java.version>
+		<start-class>Aplicacion.mainContabilidad</start-class>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -73,6 +74,17 @@
 				<plugin>
 					<groupId>org.springframework.boot</groupId>
 					<artifactId>spring-boot-maven-plugin</artifactId>
+					<configuration>
+						<mainClass>Aplicacion.mainContabilidad</mainClass>
+						<layout>JAR</layout>
+					</configuration>
+					<executions>
+						<execution>
+							<goals>
+								<goal>repackage</goal>
+							</goals>
+						</execution>
+					</executions>
 				</plugin>
 			</plugins>
 		</pluginManagement>
@@ -97,6 +109,8 @@
 					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
 				</configuration>
 			</plugin>
+
+			
 		</plugins>
 	</build>
 

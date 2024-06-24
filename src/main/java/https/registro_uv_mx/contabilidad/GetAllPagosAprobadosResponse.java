@@ -8,6 +8,8 @@
 
 package https.registro_uv_mx.contabilidad;
 
+import java.util.ArrayList;
+import java.util.List;
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
 import jakarta.xml.bind.annotation.XmlRootElement;
@@ -24,7 +26,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="success" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="pago" type="{https://registro.uv.mx/contabilidad}pagoAprobado" maxOccurs="unbounded" minOccurs="0"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,27 +37,40 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "success"
+    "pago"
 })
-@XmlRootElement(name = "PagoResponse")
-public class PagoResponse {
+@XmlRootElement(name = "getAllPagosAprobadosResponse")
+public class GetAllPagosAprobadosResponse {
 
-    protected boolean success;
-
-    /**
-     * Obtiene el valor de la propiedad success.
-     * 
-     */
-    public boolean isSuccess() {
-        return success;
-    }
+    protected List<PagoAprobado> pago;
 
     /**
-     * Define el valor de la propiedad success.
+     * Gets the value of the pago property.
+     * 
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the Jakarta XML Binding object.
+     * This is why there is not a <CODE>set</CODE> method for the pago property.
+     * 
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getPago().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link PagoAprobado }
+     * 
      * 
      */
-    public void setSuccess(boolean value) {
-        this.success = value;
+    public List<PagoAprobado> getPago() {
+        if (pago == null) {
+            pago = new ArrayList<PagoAprobado>();
+        }
+        return this.pago;
     }
 
 }

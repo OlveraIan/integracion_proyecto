@@ -24,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="success" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
+ *         &lt;element name="acceso" type="{http://www.w3.org/2001/XMLSchema}boolean"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -35,27 +35,27 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "success"
+    "acceso"
 })
-@XmlRootElement(name = "PagoResponse")
-public class PagoResponse {
+@XmlRootElement(name = "getAllPagosAprobadosRequest")
+public class GetAllPagosAprobadosRequest {
 
-    protected boolean success;
+    protected boolean acceso;
 
     /**
-     * Obtiene el valor de la propiedad success.
+     * Obtiene el valor de la propiedad acceso.
      * 
      */
-    public boolean isSuccess() {
-        return success;
+    public boolean isAcceso() {
+        return acceso;
     }
 
     /**
-     * Define el valor de la propiedad success.
+     * Define el valor de la propiedad acceso.
      * 
      */
-    public void setSuccess(boolean value) {
-        this.success = value;
+    public void setAcceso(boolean value) {
+        this.acceso = value;
     }
 
 }

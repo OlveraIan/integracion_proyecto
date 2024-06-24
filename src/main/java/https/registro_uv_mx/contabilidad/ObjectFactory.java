@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
 // Visite https://eclipse-ee4j.github.io/jaxb-ri 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2024.06.23 a las 08:33:55 PM CST 
+// Generado el: 2024.06.24 a las 12:10:15 AM CST 
 //
 
 
@@ -53,19 +53,43 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link PagosAprobadosRequest }
+     * Create an instance of {@link PagoAprobadoRequest }
      * 
      */
-    public PagosAprobadosRequest createPagosAprobadosRequest() {
-        return new PagosAprobadosRequest();
+    public PagoAprobadoRequest createPagoAprobadoRequest() {
+        return new PagoAprobadoRequest();
     }
 
     /**
-     * Create an instance of {@link PagosAprobadosResponse }
+     * Create an instance of {@link PagoAprobadoResponse }
      * 
      */
-    public PagosAprobadosResponse createPagosAprobadosResponse() {
-        return new PagosAprobadosResponse();
+    public PagoAprobadoResponse createPagoAprobadoResponse() {
+        return new PagoAprobadoResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetAllPagosAprobadosRequest }
+     * 
+     */
+    public GetAllPagosAprobadosRequest createGetAllPagosAprobadosRequest() {
+        return new GetAllPagosAprobadosRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetAllPagosAprobadosResponse }
+     * 
+     */
+    public GetAllPagosAprobadosResponse createGetAllPagosAprobadosResponse() {
+        return new GetAllPagosAprobadosResponse();
+    }
+
+    /**
+     * Create an instance of {@link PagoAprobado }
+     * 
+     */
+    public PagoAprobado createPagoAprobado() {
+        return new PagoAprobado();
     }
 
 }

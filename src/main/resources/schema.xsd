@@ -7,7 +7,8 @@ xmlns:tns=          "https://registro.uv.mx/contabilidad">
     <xsd:element name="PagoRequest">
         <xsd:complexType>
             <xsd:sequence>
-                <xsd:element name="folio" type="xsd:string" />
+                <xsd:element name="id_dependencia" type="xsd:string"/>
+                <xsd:element name="folio" type="xsd:string"/>
                 <xsd:element name="nombreProducto" type="xsd:string" />
                 <xsd:element name="cantidad" type="xsd:int" />
                 <xsd:element name="precio" type="xsd:decimal" />
@@ -21,14 +22,14 @@ xmlns:tns=          "https://registro.uv.mx/contabilidad">
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-    <xsd:element name="pagosAprobadosRequest">
+    <xsd:element name="pagoAprobadoRequest">
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="folio" type="xsd:string" />
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
-    <xsd:element name="pagosAprobadosResponse">
+    <xsd:element name="pagoAprobadoResponse">
         <xsd:complexType>
             <xsd:sequence>
                 <xsd:element name="folio" type="xsd:string" />
@@ -38,4 +39,30 @@ xmlns:tns=          "https://registro.uv.mx/contabilidad">
             </xsd:sequence>
         </xsd:complexType>
     </xsd:element>
+
+    <xsd:element name="getAllPagosAprobadosRequest">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="acceso" type="xsd:boolean"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+
+    <xsd:element name="getAllPagosAprobadosResponse">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="pago" type="tns:pagoAprobado" minOccurs="0" maxOccurs="unbounded" />
+        </xsd:sequence>
+    </xsd:complexType>
+    </xsd:element>
+
+    <xsd:complexType name="pagoAprobado">
+        <xsd:sequence>
+            <xsd:element name="folio" type="xsd:string" />
+            <xsd:element name="nombreProducto" type="xsd:string" />
+            <xsd:element name="cantidad" type="xsd:int" />
+            <xsd:element name="precio" type="xsd:decimal" />
+        </xsd:sequence>
+    </xsd:complexType>
+
 </xsd:schema>

@@ -5,7 +5,7 @@
 Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
 Visite https://eclipse-ee4j.github.io/jaxb-ri 
 Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-Generado el: 2024.06.23 a las 08:33:55 PM CST 
+Generado el: 2024.06.24 a las 12:10:15 AM CST 
 
   -->
   <bindings scd="x-schema::tns" xmlns:tns="https://registro.uv.mx/contabilidad">
@@ -18,11 +18,20 @@ Generado el: 2024.06.23 a las 08:33:55 PM CST
     <bindings scd="tns:PagoResponse">
       <class ref="https.registro_uv_mx.contabilidad.PagoResponse"/>
     </bindings>
-    <bindings scd="tns:pagosAprobadosRequest">
-      <class ref="https.registro_uv_mx.contabilidad.PagosAprobadosRequest"/>
+    <bindings scd="tns:pagoAprobadoRequest">
+      <class ref="https.registro_uv_mx.contabilidad.PagoAprobadoRequest"/>
     </bindings>
-    <bindings scd="tns:pagosAprobadosResponse">
-      <class ref="https.registro_uv_mx.contabilidad.PagosAprobadosResponse"/>
+    <bindings scd="tns:pagoAprobadoResponse">
+      <class ref="https.registro_uv_mx.contabilidad.PagoAprobadoResponse"/>
+    </bindings>
+    <bindings scd="tns:getAllPagosAprobadosRequest">
+      <class ref="https.registro_uv_mx.contabilidad.GetAllPagosAprobadosRequest"/>
+    </bindings>
+    <bindings scd="tns:getAllPagosAprobadosResponse">
+      <class ref="https.registro_uv_mx.contabilidad.GetAllPagosAprobadosResponse"/>
+    </bindings>
+    <bindings scd="~tns:pagoAprobado">
+      <class ref="https.registro_uv_mx.contabilidad.PagoAprobado"/>
     </bindings>
   </bindings>
 </bindings>

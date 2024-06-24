@@ -35,7 +35,7 @@ public class ConfiguracionSOAPWs extends WsConfigurerAdapter {
         return new ServletRegistrationBean<MessageDispatcherServlet>(servlet, "/ws/*");
     }
 
-    @Bean(name = "manejoContabilidad")
+    @Bean(name = "contabilidad")
     public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema contabilidadSchema) {
         DefaultWsdl11Definition wsdl = new DefaultWsdl11Definition();
         wsdl.setPortTypeName("contabilidadPort");

@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
 // Visite https://eclipse-ee4j.github.io/jaxb-ri 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2024.06.23 a las 08:33:55 PM CST 
+// Generado el: 2024.06.24 a las 12:10:15 AM CST 
 //
 
 
@@ -45,8 +45,8 @@ import jakarta.xml.bind.annotation.XmlType;
     "cantidad",
     "precio"
 })
-@XmlRootElement(name = "pagosAprobadosResponse")
-public class PagosAprobadosResponse {
+@XmlRootElement(name = "pagoAprobadoResponse")
+public class PagoAprobadoResponse {
 
     @XmlElement(required = true)
     protected String folio;
